@@ -95,7 +95,6 @@ module.exports = function(grunt) {
     your_target: {
       options: {
         // Target-specific options go here.
-        branch: 'heroku'
       }
     }
   }
