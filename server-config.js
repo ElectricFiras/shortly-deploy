@@ -9,7 +9,7 @@ var handler = require('./lib/request-handler');
 
 var app = express();
 
-app.set('port', (process.env.PORT || 5000));
+// app.set('port', (process.env.PORT || 5000));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(partials());
