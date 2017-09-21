@@ -90,7 +90,15 @@ module.exports = function(grunt) {
                 noStatus: false
             }
         }
+    },
+     gitpush: {
+    your_target: {
+      options: {
+        // Target-specific options go here.
+        branch: 'heroku'
+      }
     }
+  }
 
   });
 
@@ -126,7 +134,7 @@ module.exports = function(grunt) {
   grunt.registerTask('upload', function(n) {
     if (grunt.option('prod')) {
       // add your production server task here
-      grunt.task.run(['gitadd' , 'gitcommit'])
+      grunt.task.run(['gitadd' , 'gitcommit', 'gitpush'])
 
     } else {
       grunt.task.run([ 'server-dev' ]);
